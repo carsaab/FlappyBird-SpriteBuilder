@@ -209,7 +209,7 @@ setuptools
 
 <h3 id="install-javascript-virtual-environment">Install JavaScript virtual environment</h3>
 <p>We’re working in the BatChords root directory, with the Python virtual environment activated.</p>
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">cd </span>baatchords/
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">cd </span>batchords/
 <span class="gp">$</span> <span class="nb">source </span>env/bin/activate
 </code></pre></div></div>
 
@@ -226,22 +226,13 @@ setuptools
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> npm install <span class="nb">.</span>
 </code></pre></div></div>
 
-<p>For developers: the previous command installed dependencies and development dependencies.  There are two command line utilities that we’ll use in development.  A JavaScript compiler (transpiler) called <code class="highlighter-rouge">webpack</code> and a linter called <code class="highlighter-rouge">eslint</code>.  Unfortunately, <code class="highlighter-rouge">npm</code> does not provide the nice convenience of adding the tools to our path.  We’ll have to specify the path manually.</p>
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> ./node_modules/.bin/eslint <span class="nt">--version</span>
-<span class="go">v4.8.0
-</span><span class="gp">$</span> ./node_modules/.bin/webpack <span class="nt">--version</span>
-<span class="go">3.6.0
-</span></code></pre></div></div>
-
 <p>The source code for module dependencies is stored in <code class="highlighter-rouge">./node_modules/</code> and their exact versions are listed in <code class="highlighter-rouge">package-lock.json</code>.  This is what the root BatChords directory should look like now.</p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">ls</span>
 <span class="go">README.md    batchords.egg-info  env     package-lock.json setup.py
 batchords   bin     node_modules    package.json    webpack.config.js
 </span></code></pre></div></div>
 
-<p><code class="highlighter-rouge">bundle.js</code> is the output of our front end build process, a single JavaScript file that is completely self-contained with no dependencies, <code class="highlighter-rouge">batchords/static/js/bundle.js</code>.</p>
-
-<p>Run the front end build process.</p>
+<p>Now finally, run the front end build process.</p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> ./node_modules/.bin/webpack
 <span class="go">Hash: 94d02a55e475959ef08d
 Version: webpack 2.6.1
@@ -267,8 +258,11 @@ bundle.js  769 kB       0  [emitted]  [big]  main
 </span><span class="gp">$</span> ./node_modules/.bin/webpack <span class="nt">--watch</span>  <span class="c"># optional, for auto rebuild during development</span>
 </code></pre></div></div>
 
+<p><code class="highlighter-rouge">bundle.js</code> is the output of our front end build process, a single JavaScript file that is completely self-contained with no dependencies, <code class="highlighter-rouge">batchords/static/js/bundle.js</code>.</p>
+
 <p>Fire up your web server. </p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> ./bin/batchordsrun
+</code></pre></div></div>
 
 <p>Finally, browse to <a href="http://localhost:8000/">http://localhost:8000/</a>, where you’ll see the BatChords web app.</p>
 
