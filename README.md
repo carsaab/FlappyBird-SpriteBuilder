@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<h1 id="eecs485-getting-started">EECS485 Getting Started</h1>
+<h1 id="eecs485-getting-started">Running BatChords</h1>
+credit: These instructions are from Andrew DeOrio's EECS 485 Project 3 Setup tutorial. We are using the same environment.
 
 <p>This document will guide you through setting up your computer for local development on OSX for setting up a virtual machine for other operating systems.</p>
 
