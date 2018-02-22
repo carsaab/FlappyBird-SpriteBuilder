@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-     <h1 id="eecs485-getting-started">EECS485 Getting Started</h1>
+<h1 id="eecs485-getting-started">EECS485 Getting Started</h1>
 
 <p>This document will guide you through setting up your computer for local development on OSX for setting up a virtual machine for other operating systems.</p>
 
