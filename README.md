@@ -6,7 +6,7 @@ credit: These instructions are from Andrew DeOrio's EECS 485 Project 3 Setup tut
 
 <p>This document will guide you through setting up your computer for local development on OSX or Linux, or through setting up a virtual machine if using Windows or another operating system.</p>
 
-<p>Clone or download the repo <code class="highlighter-rouge">git clone https://github.com/jmzuid/BatChords</code>.  Throughout this document, we’ll refer to this root project directory as <code class="highlighter-rouge">$PROJECT_ROOT</code>.</p>
+<p>For local development, clone or download the repo <code class="highlighter-rouge">git clone https://github.com/jmzuid/BatChords</code>.  Throughout this document, we’ll refer to this root project directory as <code class="highlighter-rouge">$PROJECT_ROOT</code>.</p>
 
 <p>This tutorial will walk you through</p>
 <ul>
@@ -113,7 +113,7 @@ default                   running (virtualbox)
 <p><strong>WARNING</strong> This project uses <code class="highlighter-rouge">npm</code> to install JavaScript libraries, shared directories won’t work.  Use a  <code class="highlighter-rouge">$PROJECT_ROOT</code> that is inside the VM and <em>not</em> shared.  A good choice is <code class="highlighter-rouge">/home/vagrant</code>. </p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> vagrant ssh
 <span class="gp">$</span> <span class="nb">cd</span> /home/vagrant/
-<span class="gp">$</span> mkdir p1-insta485-static
+<span class="gp">$</span> git clone https://github.com/jmzuid/BatChords
 <span class="gp">$</span> <span class="nb">cd </span>BatChords
 <span class="gp">$</span> <span class="nb">pwd</span>
 <span class="gp">/home/vagrant/BatChords  #</span> this is your <span class="nv">$PROJECT_ROOT</span>
@@ -189,9 +189,5 @@ setuptools
 </code></pre></div></div>
 
 
-
-    </div>
-    <script src="https://eecs485staff.github.io/p1-insta485-static/assets/javascript/anchor-js/anchor.min.js"></script>
-    <script>anchors.add();</script>
   </body>
 </html>
