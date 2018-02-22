@@ -102,7 +102,7 @@ default                   running (virtualbox)
 
 <p>After starting the server, navigate to <a href="http://localhost:8000">http://localhost:8000</a> using a web browser on your host OS.  You should see something like this:</p>
 
-<p><img src="/p1-insta485-static/images/dev-server.png" alt="dev server screenshot" /></p>
+<p><img src="https://eecs485staff.github.io/p1-insta485-static/images/dev-server.png" alt="dev server screenshot" /></p>
 
 <p>After you’re done with a coding session, log out of your SSH session, and shut down the VM.</p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">vagrant@vagrant $</span> <span class="nb">exit</span>
@@ -110,13 +110,13 @@ default                   running (virtualbox)
 <span class="gp">==&gt;</span> default: Attempting graceful shutdown of VM...
 </code></pre></div></div>
 
-<p><strong>WARNING</strong> If you’re following this tutorial for a project that uses <code class="highlighter-rouge">npm</code> to install JavaScript libraries, shared directories won’t work.  Use a  <code class="highlighter-rouge">$PROJECT_ROOT</code> that is inside the VM and <em>not</em> shared.  A good choice is <code class="highlighter-rouge">/home/vagrant</code>.  Ignore this warning for P1 and P2, which use Python only.</p>
+<p><strong>WARNING</strong> This project uses <code class="highlighter-rouge">npm</code> to install JavaScript libraries, shared directories won’t work.  Use a  <code class="highlighter-rouge">$PROJECT_ROOT</code> that is inside the VM and <em>not</em> shared.  A good choice is <code class="highlighter-rouge">/home/vagrant</code>. </p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> vagrant ssh
 <span class="gp">$</span> <span class="nb">cd</span> /home/vagrant/
 <span class="gp">$</span> mkdir p1-insta485-static
-<span class="gp">$</span> <span class="nb">cd </span>p1-insta485-static
+<span class="gp">$</span> <span class="nb">cd </span>BatChords
 <span class="gp">$</span> <span class="nb">pwd</span>
-<span class="gp">/home/vagrant/p1-insta485-static  #</span> this is your <span class="nv">$PROJECT_ROOT</span>
+<span class="gp">/home/vagrant/BatChords  #</span> this is your <span class="nv">$PROJECT_ROOT</span>
 </code></pre></div></div>
 
 <h2 id="create-a-python-virtual-environment">Create a Python virtual environment</h2>
@@ -153,22 +153,22 @@ default                   running (virtualbox)
 
 <p>We now have a complete local environment for Python.  Everything lives in one directory.  Environment variables point to this virtual environment.</p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">echo</span> <span class="nv">$VIRTUAL_ENV</span>
-<span class="go">/Users/awdeorio/src/eecs485/p1-insta485-/env
+<span class="go">/Users/carolinesaab/Documents/eecs/eecs498/BatChords/env
 </span></code></pre></div></div>
 
 <p>We have a Python interpreter installed inside the virtual environment.  <code class="highlighter-rouge">which python</code> tells you exactly which python executable file will be used when you type <code class="highlighter-rouge">python</code>.  Because we’re in a virtual environment, there’s more than one option!</p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> which python
-<span class="go">/Users/awdeorio/src/eecs485/p3-insta485-clientside/env/bin/python
+<span class="go">/Users/carolinesaab/Documents/eecs/eecs498/BatChords/env/bin/python
 </span><span class="gp">$</span> which <span class="nt">-a</span> python  <span class="c"># Show all available python executables</span>
-<span class="go">/Users/awdeorio/src/eecs485/p3-insta485-clientside/env/bin/python
+<span class="go">/Users/carolinesaab/Documents/eecs/eecs498/BatChords/env/bin/python
 /usr/bin/python
 </span></code></pre></div></div>
 
 <p>There’s a package manager for Python installed in the virtual environment.  That will help us install Python libraries later.</p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> which pip
-<span class="go">/Users/awdeorio/src/eecs485/p3-insta485-clientside/env/bin/pip
+<span class="go">/Users/carolinesaab/Documents/eecs/eecs498/BatChords/env/bin/pip
 </span><span class="gp">$</span> pip <span class="nt">--version</span>
-<span class="gp">pip 9.0.1 from /Users/awdeorio/src/eecs485/p3-insta485-clientside/env/lib/python3.6/site-packages (python 3.6)  #</span> Your version may be different
+<span class="gp">pip 9.0.1 from /Users/carolinesaab/Documents/eecs/eecs498/BatChords/env/lib/python3.6/site-packages (python 3.6)  #</span> Your version may be different
 </code></pre></div></div>
 
 <p>Python packages live in the virtual environment.  We can see that Python’s own tools are already installed (<code class="highlighter-rouge">pip</code> and <code class="highlighter-rouge">setuptools</code>).</p>
@@ -182,7 +182,7 @@ setuptools
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> pip install <span class="nt">--upgrade</span> pip setuptools wheel
 </code></pre></div></div>
 
-<p>Install HTML5 Validator. We’ll use this tool later.</p>
+<p>For developers: install HTML5 Validator to check style</p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> pip install html5validator
 <span class="gp">$</span> html5validator <span class="nt">--version</span>
 <span class="gp">html5validator 0.2.6         #</span> Your version may be different
@@ -191,7 +191,7 @@ setuptools
 
 
     </div>
-    <script src="/p1-insta485-static/assets/javascript/anchor-js/anchor.min.js"></script>
+    <script src="https://eecs485staff.github.io/p1-insta485-static/assets/javascript/anchor-js/anchor.min.js"></script>
     <script>anchors.add();</script>
   </body>
 </html>
